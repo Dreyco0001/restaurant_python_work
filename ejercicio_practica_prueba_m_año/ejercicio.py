@@ -1,24 +1,6 @@
 #ejercicio test prueba
 #recordar IVA 19%
 #menu con opciones 1_ver /2_reserva/3_carta/4_pagar/5_calcelar/6_salir
-
-'''carta de la casa
-                        _________________________
-                        Bibidas (tamaños de cada bebible consulte con el mesero en turno)
-                        1_cerveza
-                        2_jugo
-                        3_Café
-                        _____________________
-                        Platos by Juan
-                        1_Ensalada de mariscos
-                        2_Ramén
-                        3_Pique macho
-                        _______________________
-                        Postres
-                        1_helado
-                        2_yogurt
-                        3_Flan especial de la casa
-                        '''
 #---------------------------------------
 import numpy as np
 import funciones_comun as fc    
@@ -63,27 +45,28 @@ colupna={}
 
 while True:
     print("welcome a pollos hermanos Restaurant.")
-    fc.mostrar_menu
-    menu_ops_P=fc.validar_opciones_menu
+    fc.mostrar_menu()
+    menu_ops_P = fc.validar_opciones_menu()
     if menu_ops_P==1:#ver mesas libres
-        pass
+        fc.ver_mesas()
+        
     elif menu_ops_P==2:#ver reserva
         pass
     elif menu_ops_P==3:#carta
-        rut=rut_validar
+        rut=rut_validar()
         if rut in Ruts:
             posicion=rut_located
         else:
             print("proceso de pago de mesa activado")
             continue
-        fc.opc_carta
+        fc.opc_carta()
         
-        menu_carta=fc.validacion_carta
+        menu_carta=fc.validacion_carta()
         
         
         
     elif menu_ops_P==4:#pagar
-        rut=rut_validar
+        rut=rut_validar()
         if rut in Ruts:
             print("proceso de pago de mesa activado")
             posicion=rut_located
@@ -91,7 +74,7 @@ while True:
             continue
             
     elif menu_ops_P==5:#cancelar
-        rut=rut_validar
+        rut=rut_validar()
         if rut in Ruts:
             continue
         else:

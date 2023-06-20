@@ -2,18 +2,27 @@
 import os
 import numpy
 import msvcrt
-restaurant=numpy.zeros((3.3),int)
+import time
+#arreglos 
+restaurant=numpy.zeros((3,3),int)
+Ruts_lista=[]
+P_nombres_lista=[]
+correo_lista=[]
+fila_lista=[]
+colupna_lista=[]
 
 
 #crear arreglo y como acomodar a gusto
 def ver_mesas ():
     for x in range(3):
+        print(f"personas {(x+1)*2} ")
         for y in range(3):
             print(restaurant[x][y], end=" ")
         print()
+    msvcrt.getch()
 
 
-def rut_validar(rut):
+def rut_validar():
     while True:
         try:
             rut=int(input("ingrese su rut sin puntos "-" y digito verificarod "))
@@ -46,7 +55,7 @@ def opc_carta (menu_carta):
                         ''')
      
      
-def validacion_carta (menu_carta):
+def validacion_carta ():
     while True:
         try:
             menu_carta=int(input("Ingrese opcion deseada"))
@@ -68,7 +77,7 @@ def mostrar_menu ():
                 5_cancelar
                 6_cierre''')
 
-def validar_opciones_menu (menu_ops_P):
+def validar_opciones_menu ():
      while True:
         try:
             menu_ops_P=int(input("Ingrese opcion deseada"))
@@ -79,7 +88,7 @@ def validar_opciones_menu (menu_ops_P):
         except:
             print("ERROR ingrese un nro entero")            
                 
-def validar_nombre (P_nombre):
+def validar_nombre ():
     while True:
         P_nombre=input("ingrese Nombre")
         if len(P_nombre.strip()) >= 3 and P_nombre.isalpha:
@@ -88,7 +97,7 @@ def validar_nombre (P_nombre):
         else:
             print("intente nuevamente")
         
-def validar_correo(correo):
+def validar_correo():
     while True:
         correo=input("ingrese correo")
         if "@" in (correo):
@@ -96,7 +105,7 @@ def validar_correo(correo):
         else:
             print("datos invalidos")
             
-def rut_located(posicion,Ruts,rut):
+def rut_located():
     if rut in range(len(Ruts)):
             for x in range(len(Ruts)):
                 if rut==Ruts[x]:
