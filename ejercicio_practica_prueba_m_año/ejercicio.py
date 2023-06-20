@@ -45,7 +45,7 @@ colupna={}
 
 
 while True:
-    print("welcome a pollos hermanos Restaorant.")
+    print("welcome a pollos hermanos Restaurant.")
     while True:
         try:
             print('''
