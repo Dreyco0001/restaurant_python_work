@@ -79,6 +79,9 @@ while True:
         fc.opc_carta
         
         menu_carta=fc.validacion_carta
+        
+        
+        
     elif menu_ops_P==4:#pagar
         rut=rut_validar
         if rut in Ruts:

@@ -25,7 +25,7 @@ def rut_validar(rut):
         except:
             print("ERROR rut ingresado no valido")
             
-def opc_carta (menu_carta)            
+def opc_carta (menu_carta):            
      print(f'''
                         carta de la casa
                     _________________________
