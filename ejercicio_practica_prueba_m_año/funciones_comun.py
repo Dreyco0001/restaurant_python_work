@@ -43,15 +43,10 @@ def opc_carta (menu_carta):
                         carta de la casa
                     _________________________
                     1) Bibidas (tamaños de cada bebible consulte con el mesero en turno)
-                    1_cerveza
-                    2_jugo
-                    3_Café
                     _____________________
                     2) Platos by Juan
-                   
                     _______________________
                     3) Postres
-                    
                     _________________________
                     4)pagar
                     _______________________
@@ -94,6 +89,8 @@ def opciones_carta():
                 2_Ramén $4000
                 3_Pique macho $3500
               ''')
+        
+        
     elif menu_carta==3:
         
         print('''
