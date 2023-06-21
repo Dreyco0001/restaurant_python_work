@@ -32,14 +32,8 @@ total=0
 
 
 #arreglos y listas
-mesas=[[1,2,3],
-       [4,5,6],
-       [7,8,9]]
-Ruts={}
-P_nombres={}
-correo={}
-fila={}
-colupna={}
+
+
 
 
 
@@ -63,7 +57,7 @@ while True:
         
         menu_carta=fc.validacion_carta()
         
-        
+        opciones_carta()
         
     elif menu_ops_P==4:#pagar
         rut=rut_validar()

@@ -10,7 +10,11 @@ P_nombres_lista=[]
 correo_lista=[]
 fila_lista=[]
 colupna_lista=[]
-
+Ruts=[]
+rut={}
+pago=[]
+menu_carta=0
+menu_carta1=0
 
 #crear arreglo y como acomodar a gusto
 def ver_mesas ():
@@ -44,18 +48,29 @@ def opc_carta (menu_carta):
                     3_Café
                     _____________________
                     2) Platos by Juan
-                    1_Ensalada de mariscos
-                    2_Ramén
-                    3_Pique macho
+                   
                     _______________________
                     3) Postres
-                    1_helado
-                    2_yogurt
-                    3_Flan especial de la casa
+                    
+                    _________________________
+                    4)pagar
+                    _______________________
+                    5)cancelar
                         ''')
      
      
 def validacion_carta ():
+    while True:
+        try:
+            menu_carta=int(input("Ingrese opcion deseada"))
+            if menu_carta in(1,2,3,4,5):
+                return menu_carta
+            else:
+                print("ERROR ingrese un número valido")
+        except:
+            print("ERROR ingrese un nro entero") 
+
+def validacion_carta1 ():
     while True:
         try:
             menu_carta=int(input("Ingrese opcion deseada"))
@@ -66,6 +81,29 @@ def validacion_carta ():
         except:
             print("ERROR ingrese un nro entero") 
 
+def opciones_carta():
+    if menu_carta==1:
+        print('''
+            1_cerveza $2500
+            2_jugo    $1000
+            3_Café    $1500''')
+        
+    elif menu_carta==2:
+        print('''
+                1_Ensalada de mariscos $7000
+                2_Ramén $4000
+                3_Pique macho $3500
+              ''')
+    elif menu_carta==3:
+        
+        print('''
+            1_helado  $1000
+            2_yogurt $500
+            3_Flan especial de la casa  $2000
+              ''')
+    elif menu_carta==4:
+        
+    else:
             
 def mostrar_menu ():
     print('''
@@ -114,5 +152,14 @@ def rut_located():
             return posicion
         
 
-
         
+def crear_usr():
+    CORREO=validar_correo
+    NOMBRE=validar_nombre
+    RUT=rut_validar
+    correo_lista.append(CORREO)
+    Ruts_lista.append(RUT)
+    P_nombres_lista=(NOMBRE)
+    
+    
+    
