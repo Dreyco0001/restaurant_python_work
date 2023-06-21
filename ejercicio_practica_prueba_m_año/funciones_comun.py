@@ -99,9 +99,9 @@ def opciones_carta():
             3_Flan especial de la casa  $2000
               ''')
     elif menu_carta==4:
-        
+        pass
     else:
-            
+        pass
 def mostrar_menu ():
     print('''
                 \t Menú 
