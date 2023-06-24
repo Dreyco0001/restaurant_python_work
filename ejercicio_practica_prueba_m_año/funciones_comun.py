@@ -11,10 +11,13 @@ correo_lista=[]
 fila_lista=[]
 colupna_lista=[]
 Ruts=[]
+compra_carta=[]
 rut={}
 pago=[]
 menu_carta=0
 menu_carta1=0
+subtotal=0
+
 
 #crear arreglo y como acomodar a gusto
 def ver_mesas ():
@@ -38,8 +41,10 @@ def rut_validar():
         except:
             print("ERROR rut ingresado no valido")
             
-def opc_carta (menu_carta):            
-     print(f'''
+
+            
+def opc_carta ():            
+    print(f'''
                         carta de la casa
                     _________________________
                     1) Bibidas (tamaños de cada bebible consulte con el mesero en turno)
@@ -52,6 +57,63 @@ def opc_carta (menu_carta):
                     _______________________
                     5)cancelar
                         ''')
+    menu_carta=validacion_carta()
+    if menu_carta==1:
+        print('''
+            1_cerveza $2500
+            2_jugo    $1000
+            3_Café    $1500''')
+        menu_carta1 = validacion_carta1()
+        if menu_carta1==1:
+            subtotal+=2500
+            print("se agrego cerveza a la compra")
+        elif menu_carta1==2:
+            subtotal+=1000
+            print("Se agrego jugo a la compra ")
+        elif menu_carta1==3:
+            subtotal+=1500
+            print("se agrego café a la compra")
+            
+        
+    elif menu_carta==2:
+        print('''
+                1_Ensalada de mariscos $7000
+                2_Ramén $4000
+                3_Pique macho $3500
+            ''')
+        menu_carta1 = validacion_carta1()
+        if menu_carta1==1:
+            subtotal+=7000
+            print("se agrego ensalada de mariscos a la compra")
+        elif menu_carta1==2:
+            subtotal+=4000
+            print("Se agrego Ramén a la compra ")
+        elif menu_carta1==3:
+            subtotal+=3500
+            print("se agrego pique macho a la compra")
+        
+    elif menu_carta==3:
+        
+        print('''
+            1_helado  $1000
+            2_yogurt $500
+            3_Flan especial de la casa  $2000
+            ''')
+        menu_carta1 = validacion_carta1()
+        if menu_carta1==1:
+            subtotal+=1000
+            print("se agrego helado a la compra")
+        elif menu_carta1==2:
+            subtotal+=500
+            print("Se agrego yogurt a la compra ")
+        elif menu_carta1==3:
+            subtotal+=2000
+            print("se agrego Flan especial a la compra")
+        
+    elif menu_carta==4:
+        pass
+    else:
+        pass
      
      
 def validacion_carta ():
@@ -70,38 +132,14 @@ def validacion_carta1 ():
         try:
             menu_carta=int(input("Ingrese opcion deseada"))
             if menu_carta in(1,2,3):
-                return menu_carta
+                return menu_carta1
             else:
                 print("ERROR ingrese un número valido")
         except:
             print("ERROR ingrese un nro entero") 
 
-def opciones_carta():
-    if menu_carta==1:
-        print('''
-            1_cerveza $2500
-            2_jugo    $1000
-            3_Café    $1500''')
-        
-    elif menu_carta==2:
-        print('''
-                1_Ensalada de mariscos $7000
-                2_Ramén $4000
-                3_Pique macho $3500
-              ''')
-        
-        
-    elif menu_carta==3:
-        
-        print('''
-            1_helado  $1000
-            2_yogurt $500
-            3_Flan especial de la casa  $2000
-              ''')
-    elif menu_carta==4:
-        pass
-    else:
-        pass
+
+    
 def mostrar_menu ():
     print('''
                 \t Menú 
@@ -157,6 +195,7 @@ def crear_usr():
     correo_lista.append(CORREO)
     Ruts_lista.append(RUT)
     P_nombres_lista=(NOMBRE)
+    compra_carta.append(0)
     
     
     

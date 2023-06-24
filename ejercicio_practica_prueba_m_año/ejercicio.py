@@ -57,7 +57,7 @@ while True:
         
         menu_carta=fc.validacion_carta()
         
-        opciones_carta()
+        
         
     elif menu_ops_P==4:#pagar
         rut=rut_validar()
